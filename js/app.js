@@ -57,5 +57,9 @@
 		$scope.params = "resume";
 	});
 
+	app.controller("wddController", function($scope) {
+		$scope.params = "wdd";
+	});
+
 
 }).call(this);

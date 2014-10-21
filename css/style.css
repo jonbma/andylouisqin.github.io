@@ -1,3 +1,4 @@
+/* Index */
 * {
 	box-sizing: border-box;
 }
@@ -46,6 +47,11 @@ h5, ul li {
 
 ul li {
 	margin-top: 10px;
+}
+
+figure img {
+	width: 150%;
+	margin-left: -25%;
 }
 
 nav {
@@ -120,8 +126,7 @@ nav {
 
 .wrapper {
 	width: 600px;
-	margin: 0 auto;
-	margin-top: 100px;
+	margin: 100px auto;
 }
 
 .footer {
@@ -144,6 +149,7 @@ nav {
 #projects {
 	width: 800px;
 	margin: 0 auto;
+	margin-bottom: 10%;
 	text-align: center;
 }
 	#projects img {
@@ -167,8 +173,8 @@ nav {
 	}
 		#nameplate figure img {
 			width: 200px;
+			margin: 0 auto;
 			border-radius: 50%;
-
 		}
 
 /* iPad Media Queries */
@@ -191,12 +197,14 @@ nav {
 		margin-bottom: 50%;
 	}
 
-	#projects {
+	#projects, #projects img {
 		width: 100%;
 	}
-		#projects img {
-			width: 100%;
-		}
+
+	figure, figure img {
+		width: 100%;
+		margin: 0;
+	}
 
 	h2 {
 		font-size: 17.5px;
@@ -204,7 +212,7 @@ nav {
 
 	.wrapper {
 		width: 80%;
-		margin-top: 0;
+		margin: 0px auto 30px auto;
 	}
 
 	.nav-left, .nav-right {
