@@ -23,6 +23,14 @@
 			templateUrl: "pages/wdd.html",
 			controller: "wddController",
 			title: "Web Design Class"
+		}).when("/apple", {
+			templateUrl: "pages/apple.html",
+			controller: "appleController",
+			title: "Summer 2014 Internship"
+		}).when("/codeprep", {
+			templateUrl: "pages/codeprep.html",
+			controller: "codeprepController",
+			title: "First Business"
 		}).otherwise({
 			redirectTo: "/",
 			title: "Portfolio"
@@ -44,7 +52,9 @@
 	app.controller("mainController", function($scope) {
 
 		$scope.projects = [
-			{title: "Web Design DeCal", path: "wdd", tagline: "Teaching Web Design to UC Berkeley"}
+			{title: "Web Design DeCal", path: "wdd", tagline: "Teaching Web Design to UC Berkeley"},
+			{title: "Pluggable Metrics", path: "apple", tagline: "Built during my Summer @ Apple, Inc."},
+			{title: "CodePrep, LLC", path: "codeprep", tagline: "Web Development Classes for K-12 Students"}
 		];
 
 	});
@@ -61,5 +71,12 @@
 		$scope.params = "wdd";
 	});
 
+	app.controller("appleController", function($scope) {
+		$scope.params = "apple";
+	});
+
+	app.controller("codeprepController", function($scope) {
+		$scope.params = "codeprep";
+	});
 
 }).call(this);
