@@ -60,14 +60,51 @@ nav {
 	padding: 20px 0;
 	width: 100%;
 	z-index: 100;
+	position: absolute;
 }
 	nav a {
 		line-height: 20px;
 		font-size: 16px;
-		color: #162214;
+		color: white;
 	}
 	nav h2 {
 		display: inline-block;
+	}
+
+.background {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 100%;
+	min-height: 100%;
+	background: url(../images/main/triangles.svg);
+}
+	.background p {
+		font-size: 25px;
+	}
+	.background h1 {
+		font-size: 75px;
+		line-height: 75px;
+	}
+	.background .overlay {
+		background: rgba(0, 0, 0, 0.20);
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.background .text {
+		display: table;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.background .text .inner {
+		text-align: center;
+		width: 640px;
+		display: table-cell;
+		vertical-align: middle;
+		color: white;
 	}
 
 .nav-left {
@@ -76,35 +113,7 @@ nav {
 }
 	.nav-left a {
 		margin-right: 40px;
-		-webkit-animation: fadein 1s;
-		-moz-animation: fadein 1s;
-		animation: fadein 1s;
-		-webkit-animation-delay: 0.5s;
-		-moz-animation-delay: 0.5s;
-		animation-delay: 0.5s;
 	}
-
-@-webkit-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	} 
-}
-@-moz-keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-	    opacity: 1;
-    }
-}
-@keyframes fadein {
-	from {
-		opacity: 0;
-	} to {
-		opacity: 1;
-	}
-}
 
 .nav-right {
 	float: right;
@@ -131,7 +140,7 @@ nav {
 
 .footer {
 	width: 100%;
-	background: #6C7A89;
+	background: #6697B7;
 	color: white;
 	display: table;
 	padding: 20px 0;
@@ -154,6 +163,7 @@ nav {
 #projects {
 	width: 800px;
 	margin: 0 auto;
+	margin-top: 150px;
 	text-align: center;
 }
 	#projects img {
@@ -212,6 +222,21 @@ nav {
 
 	h2 {
 		font-size: 17.5px;
+	}
+
+	nav {
+		padding: 50px 0; 
+	}
+		nav h2 {
+			font-size: 20px;
+		}
+
+	.background p {
+		font-size: 20px;
+	}
+	.background h1 {
+		font-size: 45px;
+		line-height: 45px;
 	}
 
 	.title {
