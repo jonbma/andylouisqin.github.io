@@ -27,6 +27,7 @@ h1 {
 	font-weight: 700;
 	font-size: 40px;
 	line-height: 40px;
+	margin-bottom: 0;
 }
 
 h2 {
@@ -225,8 +226,7 @@ nav {
 #nameplate {
 	padding-top: 10%;
 	height: 30%;
-	margin: 0 auto;
-	margin-bottom: 25%;
+	margin: 0 auto 80px auto;
 	text-align: center;
 }
 	#nameplate h1 {
@@ -258,12 +258,12 @@ nav {
 
 /* iPhone Media Queries */
 @media (max-width : 667px) {
-	#nameplate {
-		margin-bottom: 25%;
-	}
-
 	#projects, #projects img {
 		width: 100%;
+	}
+
+	#nameplate {
+		margin-bottom: 35%;
 	}
 
 	figure, figure img {
