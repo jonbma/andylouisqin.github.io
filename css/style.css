@@ -202,24 +202,28 @@ nav {
 	}
 
 .title {
-	margin-bottom: 300px;
+	margin-bottom: 150px;
 	position: relative;
 }
 
 #projects {
-	width: 800px;
+	width: 700px;
 	margin: 0 auto;
 	margin-top: 150px;
 	text-align: center;
 }
 	#projects img {
-		width: 800px;
+		width: 700px;
 	}
 	#projects h1 {
 		margin-bottom: 0;
 	}
 	#projects .banner-text {
-		color: black;
+		color: white;
+		height: 150px;
+		padding: 20px;
+		/*background-color: blue;*/
+		background: url(../images/main/projects.svg);
 	}
 
 /* Main page */
