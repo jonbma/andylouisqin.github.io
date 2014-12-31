@@ -12,31 +12,43 @@
 
 	<h1>What I Built</h1>
 	<p>
-		Because Apple is Apple, I'm not allowed to get into specifics on implementation details. I can say however, that within Server application menu, there’s a section called Stats. Stats shows you beautiful graphs for things like the number of users on the network graphed over time, or how many bytes have been saved by the caching server. The thing about Stats is that it’s limited to what metrics that are included with Server out of the box; if you wanted to see to other server data visualized in a nice graph, you wouldn’t be able to through Server.
+		Because Apple is Apple, I'm not allowed to get into specifics on the implementation details. I can say however, that within Server application menu, there’s a section called Stats. Stats shows you beautiful graphs for things like the number of users on the network graphed over time, or how many bytes have been saved by the caching server. The thing about Stats is that it’s limited to what metrics that are included with Server out of the box; if you wanted to see to other server data visualized in a nice graph, you wouldn’t be able to through Server.
 	</p>
 	<p>
 		I needed to create a really easy way to push data to Server and have it be graphed in real-time. This meant making architectural decisions from how I’d represent a “graph” to how I had to modify existing daemons that only polled for the old data, and only in 5-minute intervals. In the end, I have no screenshots of what I built, so the best I can do is describe it.
 	</p>
 	<p>
-		I made creating graphs a simple two-step process, the first was to initialize your graph within the Server application. Fill out the usuals: title, x and y axes, labels, etc. Then the next step is to take a concise shell script that takes in the name of the graph and the value(s) as arguments. When the script is executed in the program that is generating the data, Server application routes the value to the correct graph and draw the data point. If any errors occurred it noisily fails, telling the server administrator the exact error. This redesigned architecure I called <b>Pluggable Metrics</b>, since it was as easy as plugging in a shell script to push data to Server.
+		I made creating graphs a simple two-step process, the first was to initialize your graph within the Server application. Fill out the usuals: title, x and y axes, labels, etc. Then the next step is to take a concise shell script that takes in the name of the graph and the value(s) as arguments. When the script is executed in the program that is generating the data, Server application routes the value to the correct graph and draw the data point. If any errors occurred it noisily fails, telling the server administrator the exact error. This redesigned architecure I called <b>Pluggable Metrics</b>, since it was as easy as plugging in a shell script to your code.
 	</p>
 
 	<h1>What I Learned</h1>
 	<p>
 		<b>How to handle a ton of (conflicting) feedback.</b>
-		<br><br>
+		<p>
+			Apple puts its interns through a tournament bracket-style competition of presenting to the organization. In putting together this presentation, I got a ton of feedback. It really was like drinking from a firehose. For instance, some of my team members liked my animation series to explain my project, others preferred it to be on a single slide.
+			<br><br>
+			I knew that after having written down every piece of feedback, I just had to sit down with my manager and pick just the top 3 most important things. Eventually the conflicts came down to me to decide what made the most sense. At some point, you just have to make a priority queue and execute.
+		</p>
 
-		<br><br>
-
-		<b>Surround yourself with the smartest people you can find.</b>
-		<br><br>
+		<b>Learn as much you can from your co-workers.</b>
+		<p>
+			My team at Apple was awesome. Meeting them was really the first time I’d ever really been around engineers in industry. Every lunch, we’d all go to Caffé Macs or a nearby restaurant and they’d talk about everything. A lot of the time they’d talk about software, but it was really from an engineer’s perspective. I also really enjoyed the company of my fellow interns from the neighboring teams. They were all extremely talented and it was great to be able to ask them for tips when necessary. The funny thing was that it was against company policy to actually look at each other’s screens to debug anything, we just sort of had to ask for error messages.
+		</p>
 
 		<figure>
 			<img src="../images/apple/interns.png" />
 			<figcaption>The OS Services division interns!</figcaption>
 		</figure>
 
-		<br><br>
+		<b>How to swim when thrown off the deep end.</b>
+		<p>
+			The truth is that I’d only done a bit of Objective-C programming before my internship. But I’m a firm believer that programming isn’t really about picking up languages and frameworks as much as it’s about being able to figure things out. My team left me a couple textbooks on programming in Objective-C for Cocoa applications, and I buckled down. Within the first 2 weeks, I’d made a bunch of practice applications in Cocoa, each more complex than the previous one. It’s really not so different from Java.
+			<br><br>
+			I also decided early on that I wanted to ask questions, but not over every small question I had about the codebase. I tried my best to figure things out, and asked for suggestions when needed. In my last 1-on-1, my manager told me that he was impressed with my pace and that I could officially say I knew Objective-C.
+		</p>
+		<p>
+			My experience at Apple enabled me to finally get my hands dirty and push code that would be shipped to hundreds of thousands of users. It was extremely difficult to come back to school, needless to say.
+		</p>
 	</p>
 
 </div>
