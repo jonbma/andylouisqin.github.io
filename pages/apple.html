@@ -2,11 +2,12 @@
 
 	<figure>
 		<img src="../images/apple/apple.png" />
+		<figcaption>Mmmm, Server.</figcaption>
 	</figure>
 
 	<h1>The Product</h1>
 	<p>
-		I was on the OS X Server team. Just as a brief background, the Server application for OS X that turns your Mac into a full-featured server to host websites, email, file sharing, calendars, and <a href="https://www.apple.com/osx/server/features/#wiki" target="_blank">more</a>. It's primarily used by schools and small businesses, and is the <b>5<sup>th</sup></b> most downloaded application among paid applications in the Mac App Store, as of this writing.
+		I was on the OS X Server team. Just as a brief background, the Server application for OS X that turns your Mac into a full-featured server to host websites, email, file sharing, calendars, and <a href="https://www.apple.com/osx/server/features/#wiki" target="_blank">more</a>. It's primarily used by schools and small businesses, and is the <b>5<sup>th</sup></b> most downloaded application among paid apps in the Mac App Store, as of this writing.
 	</p>
 
 	<h1>What I Built</h1>
@@ -14,10 +15,28 @@
 		Because Apple is Apple, I'm not allowed to get into specifics on implementation details. I can say however, that within Server application menu, there’s a section called Stats. Stats shows you beautiful graphs for things like the number of users on the network graphed over time, or how many bytes have been saved by the caching server. The thing about Stats is that it’s limited to what metrics that are included with Server out of the box; if you wanted to see to other server data visualized in a nice graph, you wouldn’t be able to through Server.
 	</p>
 	<p>
-		So I needed to create a really easy way to push data to Server and have it be graphed in real-time. This meant making architectural decisions from how I’d represent a “graph” and how I had to modify existing daemons that only polled for the old data, and only in 5-minute intervals. In the end, I have no screenshots of what I built, so the best I can do is describe it.
+		I needed to create a really easy way to push data to Server and have it be graphed in real-time. This meant making architectural decisions from how I’d represent a “graph” to how I had to modify existing daemons that only polled for the old data, and only in 5-minute intervals. In the end, I have no screenshots of what I built, so the best I can do is describe it.
 	</p>
 	<p>
 		I made creating graphs a simple two-step process, the first was to initialize your graph within the Server application. Fill out the usuals: title, x and y axes, labels, etc. Then the next step is to take a concise shell script that takes in the name of the graph and the value(s) as arguments. When the script is executed in the program that is generating the data, Server application routes the value to the correct graph and draw the data point. If any errors occurred it noisily fails, telling the server administrator the exact error. This redesigned architecure I called <b>Pluggable Metrics</b>, since it was as easy as plugging in a shell script to push data to Server.
+	</p>
+
+	<h1>What I Learned</h1>
+	<p>
+		<b>How to handle a ton of (conflicting) feedback.</b>
+		<br><br>
+
+		<br><br>
+
+		<b>Surround yourself with the smartest people you can find.</b>
+		<br><br>
+
+		<figure>
+			<img src="../images/apple/interns.png" />
+			<figcaption>The OS Services division interns!</figcaption>
+		</figure>
+
+		<br><br>
 	</p>
 
 </div>

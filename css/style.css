@@ -54,6 +54,12 @@ figure img {
 	margin-left: -10%;
 }
 
+figcaption {
+	color: gray;
+	font-style: italic;
+	text-align: center;
+}
+
 nav {
 	top: 0;
 	color: white;
@@ -273,6 +279,10 @@ nav {
 	figure, figure img {
 		width: 100%;
 		margin: 0;
+	}
+
+	figcaption {
+		font-size: 14px;
 	}
 
 	h1 {
