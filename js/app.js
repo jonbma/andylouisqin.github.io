@@ -52,9 +52,21 @@
 	app.controller("mainController", function($scope) {
 
 		$scope.projects = [
-			{title: "Web Design DeCal", path: "wdd", tagline: "Teaching Web Design to UC Berkeley"},
-			{title: "Pluggable Metrics", path: "apple", tagline: "Built during my Summer @ Apple, Inc."},
-			{title: "CodePrep, LLC", path: "codeprep", tagline: "Web Development Classes for K-12 Students"}
+			{
+				title: "Web Design DeCal", 
+				path: "wdd", 
+				tagline: "Teaching Web Design to UC Berkeley",
+				summary: "How I found myself teaching Berkeley's most popular student-run class."},
+			{
+				title: "Pluggable Metrics", 
+				path: "apple", 
+				tagline: "Built during my Summer @ Apple, Inc.",
+				summary: "A data visualization tool to help server administrators everywhere!"},
+			{
+				title: "CodePrep, LLC",
+				path: "codeprep", 
+				tagline: "Web Development Classes for K-12 Students",
+				summary: "In which I ramble about my first business, and the challenges we faced."}
 		];
 
 	});
